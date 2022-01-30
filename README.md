@@ -1,6 +1,17 @@
 # Flutter Weather App
-
 Weather app available for web, iOS, Android and MacOS
+
+### iOS
+![Simulator Screen Shot - iPhone 13 - 2022-01-30 at 08 11 01](https://user-images.githubusercontent.com/4668999/151691885-239829d1-b8be-42dd-9681-c19259e7e425.png)
+
+### Android
+![Screenshot_20220130_080651](https://user-images.githubusercontent.com/4668999/151691898-6eaf6223-fe59-4839-9aa2-3150fbe8c043.png)
+
+### Web
+<img width="1716" alt="Capture d’écran 2022-01-30 à 08 30 17" src="https://user-images.githubusercontent.com/4668999/151691907-c8c21c5f-abf3-407f-9b36-f143f3ad475f.png">
+
+### MacOs
+<img width="1290" alt="Capture d’écran 2022-01-30 à 08 25 28" src="https://user-images.githubusercontent.com/4668999/151691905-e859a483-fa93-4e67-a720-d25da31d4fc3.png">
 
 ## Get started
 - Copy **.env.example** to **.env**
