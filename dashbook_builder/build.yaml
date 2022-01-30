@@ -1,0 +1,9 @@
+builders:
+  dashbook_builder:
+    import: "package:dashbook_builder/builder.dart"
+    builder_factories: ["dashbookBuilder"]
+    build_extensions: { ".dashbook.dart": [".stories.dashbook.dart"] }
+    auto_apply: root_package
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
+    

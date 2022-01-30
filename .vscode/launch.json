@@ -1,0 +1,40 @@
+{
+  // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+  // Pointez pour afficher la description des attributs existants.
+  // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter mac",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "args": [
+        "-d",
+        "macos",
+      ]
+    },
+    {
+      "name": "Flutter web",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "args": [
+        "-d",
+        "chrome",
+      ]
+    },
+    {
+      "name": "Flutter for mobile",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+    },
+    {
+      "name": "Dashbook",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main_dashbook.dart",
+    }
+  ]
+}
