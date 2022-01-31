@@ -42,9 +42,9 @@ $ flutter run lib/main.dart -d [macos|chrome|ios|iphone|...]
 $ flutter run lib/main_dashbook.dart -d [macos|chrome|ios|iphone|...]
 ```
 ## Various
-### Platform dependent import
+- Platform dependent import
 Exemple of target platform conditioned import:
 > **lib/widgets/details_header/details_header.dashbook.dart**
 
-### Custom run scripts 
+- Custom run scripts 
 Please check VS Code Execute and Debug tab to check available runners
