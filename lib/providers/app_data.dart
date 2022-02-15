@@ -12,7 +12,7 @@ class AppData extends ChangeNotifier {
   City? selectedFavorite;
   WeatherResult? weather;
 
-  AppData() {  
+  AppData() {
     _storage.getFavorites().then((savedFavorites) {
       isLoading = false;
 
