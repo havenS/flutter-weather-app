@@ -11,7 +11,7 @@ class SearchResults extends StatelessWidget {
   final List<GeocodingSearchResult> searchResults;
 
   _handleResultPressed(
-      BuildContext context, String name, String latitude, String longitude) {
+      BuildContext context, String name, double latitude, double longitude) {
     City city = City(name, latitude, longitude);
     _searchForm.setSelectedCity(city);
 
@@ -30,7 +30,7 @@ class SearchResults extends StatelessWidget {
                 children: searchResults
                     .map((result) => TextButton(
                           onPressed: () => _handleResultPressed(context,
-                              result.displayName, result.lat, result.lon),
+                              result.displayName, double.parse(result.lat), double.parse(result.lon)),
                           child: Text(
                             result.displayName,
                             style: const TextStyle(

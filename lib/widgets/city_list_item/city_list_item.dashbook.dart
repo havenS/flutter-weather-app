@@ -7,6 +7,6 @@ cityListItemStory(Dashbook dashbook) {
   dashbook.storiesOf('City list item').add(
       'default',
       (DashbookContext context) => CityListItem(
-            city: City('Bordeaux', '44.7577118', '-0.7345162'),
+            city: City('Bordeaux', 44.7577118, -0.7345162),
           ));
 }
