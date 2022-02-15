@@ -3,8 +3,7 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:weather_app/models/city.dart';
 
-String defaultCities =
-    '[{"name":"Lille, France","latitude":"50.6365654","longitude":"3.0635282"},{"name":"Bordeaux, France","latitude":"44.86342845","longitude":"-0.5600879251945047"},{"name":"Nantes, France","latitude":"47.2186371","longitude":"-1.5541362"},{"name":"Marseille, France","latitude":"43.29408","longitude":"5.443648394624866"}]';
+List<City> defaultCities = [City("Lille", 50.6365654, 3.0635282), City("Bordeaux", 44.86342845, -0.5600879251945047)];
 
 class Storage {
   Future<SharedPreferences> get _prefs async => SharedPreferences.getInstance();
@@ -13,15 +12,18 @@ class Storage {
 
   Future<List<City>> getFavorites() async {
     String value = (await _prefs).getString(favoriteKey) ?? '[]';
-    List<dynamic> json = jsonDecode(value != '[]' ? value : defaultCities);
-
-    return json
+    List<dynamic> favorites = jsonDecode(value);
+    List<City> cities = favorites
         .map((x) => City(x['name']!, x['latitude']!, x['longitude']!))
         .toList();
+
+    return cities.isNotEmpty ? cities : defaultCities;
   }
 
   saveFavorites(List<City> favorites) async {
-    (await _prefs).setString(favoriteKey,
-        json.encode(favorites.map((favorite) => favorite.toJson()).toList()));
+    String data = json.encode(favorites.map((favorite) => favorite.toJson()).toList());
+
+    (await _prefs).setString(favoriteKey, data);
+
   }
 }
